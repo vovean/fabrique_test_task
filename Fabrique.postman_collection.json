@@ -1,0 +1,1777 @@
+{
+	"info": {
+		"_postman_id": "fee734da-eb01-4a30-bd7b-bb1ead5ec6ec",
+		"name": "Fabrique",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Common requests",
+			"item": [
+				{
+					"name": "All polls",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8000/api/polls",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"polls"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all polls",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:8000/api/polls",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"polls"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 16 Nov 2021 19:00:02 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1087"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 3,\n        \"title\": \"postman\",\n        \"start_date\": \"2012-01-25T15:45:00+04:00\",\n        \"end_date\": \"2012-01-25T15:45:00+04:00\",\n        \"description\": \"Made from postman without questions\"\n    },\n    {\n        \"id\": 5,\n        \"title\": \"postman\",\n        \"start_date\": \"2012-01-25T15:45:00+04:00\",\n        \"end_date\": \"2012-01-25T15:45:00+04:00\",\n        \"description\": \"Made from postman without questions\"\n    },\n    {\n        \"id\": 6,\n        \"title\": \"postman\",\n        \"start_date\": \"2012-01-25T15:45:00+04:00\",\n        \"end_date\": \"2012-01-25T15:45:00+04:00\",\n        \"description\": \"Made from postman without questions\"\n    },\n    {\n        \"id\": 7,\n        \"title\": \"postman\",\n        \"start_date\": \"2012-01-25T15:45:00+04:00\",\n        \"end_date\": \"2012-01-25T15:45:00+04:00\",\n        \"description\": \"Made from postman without questions\"\n    },\n    {\n        \"id\": 8,\n        \"title\": \"postman\",\n        \"start_date\": \"2012-01-25T15:45:00+04:00\",\n        \"end_date\": \"2012-01-25T15:45:00+04:00\",\n        \"description\": \"Made from postman with questions\"\n    },\n    {\n        \"id\": 4,\n        \"title\": \"postman upd 4\",\n        \"start_date\": \"2012-01-25T15:45:00+04:00\",\n        \"end_date\": \"2012-01-25T15:45:00+04:00\",\n        \"description\": \"Updated by postman\"\n    },\n    {\n        \"id\": 1,\n        \"title\": \"Test 1\",\n        \"start_date\": \"2002-01-25T14:45:00+03:00\",\n        \"end_date\": \"2003-01-25T14:45:00+03:00\",\n        \"description\": \"A very interesting poll\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Poll by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "127.0.0.1:8000/api/polls/4",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"polls",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get poll by id as admin",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "127.0.0.1:8000/api/polls/4",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"polls",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 17 Nov 2021 10:09:11 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "576"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"title\": \"postman upd 4\",\n    \"start_date\": \"2012-01-25T15:45:00+04:00\",\n    \"end_date\": \"2012-01-25T15:45:00+04:00\",\n    \"description\": \"Updated by postman\",\n    \"questions\": [\n        {\n            \"text\": \"New first 2\",\n            \"question_type\": \"TEXT\",\n            \"id\": 11\n        },\n        {\n            \"text\": \"Second\",\n            \"question_type\": \"TEXT\",\n            \"id\": 12\n        },\n        {\n            \"text\": \"1 or 3?\",\n            \"question_type\": \"MO\",\n            \"id\": 2\n        },\n        {\n            \"text\": \"4th\",\n            \"question_type\": \"TEXT\",\n            \"id\": 16\n        },\n        {\n            \"text\": \"1 or 2 pr 3 or 4 or all?\",\n            \"question_type\": \"MO\",\n            \"id\": 3\n        },\n        {\n            \"text\": \"Posted without order\",\n            \"question_type\": \"TEXT\",\n            \"id\": 17\n        },\n        {\n            \"text\": \"5th\",\n            \"question_type\": \"TEXT\",\n            \"id\": 18\n        },\n        {\n            \"text\": \"5th\",\n            \"question_type\": \"TEXT\",\n            \"id\": 19\n        }\n    ]\n}"
+						},
+						{
+							"name": "Get poll by id as not admin",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "127.0.0.1:8000/api/polls/4",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"polls",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 17 Nov 2021 10:16:47 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "514"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"title\": \"postman upd 4\",\n    \"start_date\": \"2012-01-25T15:45:00+04:00\",\n    \"end_date\": \"2012-01-25T15:45:00+04:00\",\n    \"description\": \"Updated by postman\",\n    \"questions\": [\n        {\n            \"text\": \"New first 2\",\n            \"question_type\": \"TEXT\"\n        },\n        {\n            \"text\": \"Second\",\n            \"question_type\": \"TEXT\"\n        },\n        {\n            \"text\": \"1 or 3?\",\n            \"question_type\": \"MO\"\n        },\n        {\n            \"text\": \"4th\",\n            \"question_type\": \"TEXT\"\n        },\n        {\n            \"text\": \"1 or 2 pr 3 or 4 or all?\",\n            \"question_type\": \"MO\"\n        },\n        {\n            \"text\": \"Posted without order\",\n            \"question_type\": \"TEXT\"\n        },\n        {\n            \"text\": \"5th\",\n            \"question_type\": \"TEXT\"\n        },\n        {\n            \"text\": \"5th\",\n            \"question_type\": \"TEXT\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Send answers",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 348765346,\r\n    \"answers\": [\r\n        \"1\",\r\n        \"2\",\r\n        \"3\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/polls/16/answer/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"polls",
+								"16",
+								"answer",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Send not enough answers",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": 348765346,\r\n    \"answers\": [\r\n        \"1\",\r\n        \"3,4\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/polls/4/answer/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"polls",
+										"4",
+										"answer",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 16 Nov 2021 19:01:21 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "44"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Not all questions were answered\"\n}"
+						},
+						{
+							"name": "Send answers",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user_id\": 348765346,\r\n    \"answers\": [\r\n        \"1\",\r\n        \"2\",\r\n        \"3\",\r\n        \"4\",\r\n        \"5\",\r\n        \"6\",\r\n        \"7\",\r\n        \"8\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/polls/4/answer/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"polls",
+										"4",
+										"answer",
+										""
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 16 Nov 2021 19:06:21 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.12"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Authenticate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"root\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/auth/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Authenticate",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"root\",\r\n    \"password\": \"123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/auth/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 16 Nov 2021 19:08:52 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"7cae38ea029f346aaa84dc0faca5be67321965ac\"\n}"
+						},
+						{
+							"name": "Invalid authentication",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"root\",\r\n    \"password\": \"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/auth/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"auth",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 16 Nov 2021 19:09:09 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.8.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"non_field_errors\": [\n        \"Unable to log in with provided credentials.\"\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Admin requests",
+			"item": [
+				{
+					"name": "Polls actions",
+					"item": [
+						{
+							"name": "Create poll without questions",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"without questions\",\r\n    \"start_date\": \"2012-01-25T14:45:00+03:00\",\r\n    \"end_date\": \"2012-01-25T14:55:00+03:00\",\r\n    \"description\": \"Made from postman without questions\",\r\n    \"questions\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/polls/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"polls",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create poll without questions",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"without questions\",\r\n    \"start_date\": \"2012-01-25T14:45:00+03:00\",\r\n    \"end_date\": \"2012-01-25T14:55:00+03:00\",\r\n    \"description\": \"Made from postman without questions\",\r\n    \"questions\": []\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "127.0.0.1:8000/api/polls/",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"polls",
+												""
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 16 Nov 2021 19:11:17 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.8.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, POST, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "Content-Length",
+											"value": "183"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 9,\n    \"title\": \"without questions\",\n    \"start_date\": \"2012-01-25T15:45:00+04:00\",\n    \"end_date\": \"2012-01-25T15:55:00+04:00\",\n    \"description\": \"Made from postman without questions\",\n    \"questions\": []\n}"
+								}
+							]
+						},
+						{
+							"name": "Create poll with questions",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"postman\",\r\n    \"start_date\": \"2012-01-25T14:45:00+03:00\",\r\n    \"end_date\": \"2012-01-25T14:45:00+03:00\",\r\n    \"description\": \"Made from postman with questions\",\r\n    \"questions\": [\r\n        {\r\n            \"text\": \"1 or 3?\",\r\n            \"question_type\": \"SO\"\r\n        },\r\n        {\r\n            \"text\": \"1 or 2 pr 3 or 4 or all?\",\r\n            \"question_type\": \"MO\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/polls/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"polls",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create poll with questions",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"postman\",\r\n    \"start_date\": \"2012-01-25T14:45:00+03:00\",\r\n    \"end_date\": \"2012-01-25T14:45:00+03:00\",\r\n    \"description\": \"Made from postman with questions\",\r\n    \"questions\": [\r\n        {\r\n            \"text\": \"1 or 3?\",\r\n            \"question_type\": \"SO\"\r\n        },\r\n        {\r\n            \"text\": \"1 or 2 pr 3 or 4 or all?\",\r\n            \"question_type\": \"MO\"\r\n        }\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "127.0.0.1:8000/api/polls/",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"polls",
+												""
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 17 Nov 2021 10:17:34 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.8.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, POST, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "Content-Length",
+											"value": "283"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 16,\n    \"title\": \"postman\",\n    \"start_date\": \"2012-01-25T15:45:00+04:00\",\n    \"end_date\": \"2012-01-25T15:45:00+04:00\",\n    \"description\": \"Made from postman with questions\",\n    \"questions\": [\n        {\n            \"text\": \"1 or 3?\",\n            \"question_type\": \"SO\",\n            \"id\": 33\n        },\n        {\n            \"text\": \"1 or 2 pr 3 or 4 or all?\",\n            \"question_type\": \"MO\",\n            \"id\": 34\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Update poll (PUT)",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"wow new title\",\r\n    \"start_date\": \"2012-01-25T15:45:00+04:00\",\r\n    \"end_date\": \"2012-01-25T15:45:00+04:00\",\r\n    \"description\": \"Made from postman with questions\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/polls/15/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"polls",
+										"15",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Update poll (PUT)",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"wow new title\",\r\n    \"start_date\": \"2012-01-25T15:45:00+04:00\",\r\n    \"end_date\": \"2012-01-25T15:45:00+04:00\",\r\n    \"description\": \"Made from postman with questions\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "127.0.0.1:8000/api/polls/15/",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"polls",
+												"15",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 16 Nov 2021 19:38:03 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.8.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "Content-Length",
+											"value": "162"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 15,\n    \"title\": \"wow new title\",\n    \"start_date\": \"2012-01-25T15:45:00+04:00\",\n    \"end_date\": \"2012-01-25T15:45:00+04:00\",\n    \"description\": \"Made from postman with questions\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Update poll (PATCH)",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"updated by Patch\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/polls/15/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"polls",
+										"15",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Update poll (PATCH)",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"updated by Patch\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "127.0.0.1:8000/api/polls/15/",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"polls",
+												"15",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 16 Nov 2021 19:38:25 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.8.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "Content-Length",
+											"value": "165"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 15,\n    \"title\": \"updated by Patch\",\n    \"start_date\": \"2012-01-25T15:45:00+04:00\",\n    \"end_date\": \"2012-01-25T15:45:00+04:00\",\n    \"description\": \"Made from postman with questions\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete poll",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "127.0.0.1:8000/api/polls/2/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"polls",
+										"2",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete poll",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "127.0.0.1:8000/api/polls/7/",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"polls",
+												"7",
+												""
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 16 Nov 2021 19:38:47 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.8.12"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "Content-Length",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "Add question to the poll",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"text\": \"new question 2\",\r\n    \"question_type\": \"TEXT\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/polls/16/add_question/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"polls",
+										"16",
+										"add_question",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Add question to the poll",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"text\": \"new question\",\r\n    \"question_type\": \"TEXT\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "127.0.0.1:8000/api/polls/16/add_question/",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"polls",
+												"16",
+												"add_question",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 17 Nov 2021 10:19:20 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.8.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "Allow",
+											"value": "POST, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "Content-Length",
+											"value": "366"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 16,\n    \"title\": \"postman\",\n    \"start_date\": \"2012-01-25T15:45:00+04:00\",\n    \"end_date\": \"2012-01-25T15:45:00+04:00\",\n    \"description\": \"Made from postman with questions\",\n    \"questions\": [\n        {\n            \"text\": \"1 or 3?\",\n            \"question_type\": \"SO\",\n            \"id\": 33\n        },\n        {\n            \"text\": \"1 or 2 pr 3 or 4 or all?\",\n            \"question_type\": \"MO\",\n            \"id\": 34\n        },\n        {\n            \"text\": \"new question\",\n            \"question_type\": \"TEXT\",\n            \"id\": 35\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "View answers by specific user",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"text\": \"5th\",\r\n    \"question_type\": \"TEXT\",\r\n    \"order\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/polls/16/answers/348765346/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"polls",
+										"16",
+										"answers",
+										"348765346",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "View answers by specific user (all questions have an answer)",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"text\": \"5th\",\r\n    \"question_type\": \"TEXT\",\r\n    \"order\": 5\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "127.0.0.1:8000/api/polls/16/answers/348765346/",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"polls",
+												"16",
+												"answers",
+												"348765346",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 17 Nov 2021 10:20:13 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.8.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "Content-Length",
+											"value": "429"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"poll\": {\n        \"id\": 16,\n        \"title\": \"postman\",\n        \"start_date\": \"2012-01-25T15:45:00+04:00\",\n        \"end_date\": \"2012-01-25T15:45:00+04:00\",\n        \"description\": \"Made from postman with questions\"\n    },\n    \"questions_answers\": [\n        {\n            \"text\": \"1 or 3?\",\n            \"question_type\": \"SO\",\n            \"id\": 33,\n            \"answer\": \"1\"\n        },\n        {\n            \"text\": \"1 or 2 pr 3 or 4 or all?\",\n            \"question_type\": \"MO\",\n            \"id\": 34,\n            \"answer\": \"2\"\n        },\n        {\n            \"text\": \"new question\",\n            \"question_type\": \"TEXT\",\n            \"id\": 35,\n            \"answer\": \"3\"\n        }\n    ]\n}"
+								},
+								{
+									"name": "View answers by specific user (question added after answering to poll has no answer)",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"text\": \"5th\",\r\n    \"question_type\": \"TEXT\",\r\n    \"order\": 5\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "127.0.0.1:8000/api/polls/16/answers/348765346/",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"polls",
+												"16",
+												"answers",
+												"348765346",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 17 Nov 2021 10:20:49 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.8.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "Content-Length",
+											"value": "508"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"poll\": {\n        \"id\": 16,\n        \"title\": \"postman\",\n        \"start_date\": \"2012-01-25T15:45:00+04:00\",\n        \"end_date\": \"2012-01-25T15:45:00+04:00\",\n        \"description\": \"Made from postman with questions\"\n    },\n    \"questions_answers\": [\n        {\n            \"text\": \"1 or 3?\",\n            \"question_type\": \"SO\",\n            \"id\": 33,\n            \"answer\": \"1\"\n        },\n        {\n            \"text\": \"1 or 2 pr 3 or 4 or all?\",\n            \"question_type\": \"MO\",\n            \"id\": 34,\n            \"answer\": \"2\"\n        },\n        {\n            \"text\": \"new question\",\n            \"question_type\": \"TEXT\",\n            \"id\": 35,\n            \"answer\": \"3\"\n        },\n        {\n            \"text\": \"new question 2\",\n            \"question_type\": \"TEXT\",\n            \"id\": 36,\n            \"answer\": null\n        }\n    ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Questions actions",
+					"item": [
+						{
+							"name": "Update question by id (PUT)",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"text\": \"updated text and type\",\r\n    \"question_type\": \"MO\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/questions/36/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"questions",
+										"36",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Update question by id (PUT)",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"text\": \"updated text and type\",\r\n    \"question_type\": \"MO\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "127.0.0.1:8000/api/questions/36/",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"questions",
+												"36",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 17 Nov 2021 10:22:11 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.8.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "Allow",
+											"value": "PUT, PATCH, DELETE, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "Content-Length",
+											"value": "61"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"text\": \"updated text and type\",\n    \"question_type\": \"MO\",\n    \"id\": 36\n}"
+								}
+							]
+						},
+						{
+							"name": "Update question by id (PATCH)",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"text\": \"updated only text\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:8000/api/questions/36/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"questions",
+										"36",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Update question by id (PATCH)",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"text\": \"updated only text\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "127.0.0.1:8000/api/questions/36/",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"questions",
+												"36",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 17 Nov 2021 10:22:59 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.8.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "Allow",
+											"value": "PUT, PATCH, DELETE, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "Content-Length",
+											"value": "57"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"text\": \"updated only text\",\n    \"question_type\": \"MO\",\n    \"id\": 36\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete question",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "127.0.0.1:8000/api/questions/31/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"questions",
+										"31",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete question",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Token 7cae38ea029f346aaa84dc0faca5be67321965ac",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "127.0.0.1:8000/api/questions/31/",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"questions",
+												"31",
+												""
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Tue, 16 Nov 2021 19:47:26 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.8.12"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "Allow",
+											"value": "PUT, PATCH, DELETE, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "Content-Length",
+											"value": "0"
+										}
+									],
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
